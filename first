@@ -1,0 +1,30 @@
+#include<iostream>
+ using namespace std;
+ class student{
+ public:
+ int age;
+ string name;
+ bool scholarship;
+ student(string nm){
+ name=nm;
+ }
+student(int a,string fn,bool s){
+ age=a;
+ name=fn;
+ scholarship=s;}
+ student(){
+ }
+
+ void getname(){
+ cout<<"Name is "<<name<<endl<<age<<endl;}
+ };
+ int main(){
+ student s1(15,"Erwin",true);
+ student s2("Levi");
+ student s3;
+ s3.name="Eren";
+ s1.getname();
+ s2.getname();
+ s3.getname();
+ return 0;
+ }
