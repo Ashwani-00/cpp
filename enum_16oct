@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+enum animal{
+    dog=33,cat=32,lion=56,tiger=45,elephant=100
+};
+int main() {
+    animal a=cat;
+    animal ab=dog;
+    cout<<"Weight: "<<a<<endl;
+    cout<<"Weight: "<<ab;
+    return 0;
+}
