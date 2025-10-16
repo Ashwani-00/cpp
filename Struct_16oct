@@ -1,0 +1,25 @@
+#include<iostream>
+ using namespace std;
+ struct student{
+
+ int age;
+ string name;
+ 
+student(int a,string fn){
+ age=a;
+ name=fn;
+}
+ student(){
+ }
+
+ void getname(){
+ cout<<"Name is "<<name<<endl<<age<<endl;}
+ };
+ int main(){
+ student s1(15,"Ayush");
+ student s2;
+ s2.name="Rohit";
+ s1.getname();
+ s2.getname();
+ return 0;
+ }
