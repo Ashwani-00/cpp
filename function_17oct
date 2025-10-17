@@ -1,0 +1,40 @@
+// this is a simple program of function
+/* #include <bits/stdc++.h>
+using namespace std;
+int mul(int x,int y,int z){
+    int a=x*y*z;
+    return a;
+}
+int main() {
+    int a,b,c;
+    cin>>a>>b>>c;
+    int product=mul(a,b,c);
+    cout<<product;
+
+    return 0;
+}*/
+
+#include <bits/stdc++.h>
+using namespace std;
+class math{
+    public:
+    int a,b;
+
+    void sum(int x,int y){
+        cout<<x+y<<endl;
+    }
+    inline void SumOfThreeNumbers(int x,int y,int z );
+};
+inline void math :: SumOfThreeNumbers(int x, int y, int z){
+    cout<<x+y+z;
+}
+
+int main() {
+    int a,b,c;
+    math m;
+    cin>>a>>b>>c;
+    m.sum(a,b);
+    m.SumOfThreeNumbers(a,b,c);
+
+    return 0;
+}
