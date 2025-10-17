@@ -24,17 +24,22 @@ class math{
         cout<<x+y<<endl;
     }
     inline void SumOfThreeNumbers(int x,int y,int z );
+     void SumOfFourNumbers(int x,int y,int z,int a);
 };
 inline void math :: SumOfThreeNumbers(int x, int y, int z){
-    cout<<x+y+z;
+    cout<<x+y+z<<endl;
+}
+void math :: SumOfFourNumbers(int x,int y,int z,int a){
+    cout<<"Sum when the function is not inline";
+    cout<<endl<<x+y+z+a;
 }
 
 int main() {
-    int a,b,c;
+    int a,b,c,d;
     math m;
-    cin>>a>>b>>c;
+    cin>>a>>b>>c>>d;
     m.sum(a,b);
     m.SumOfThreeNumbers(a,b,c);
-
+    m.SumOfFourNumbers(a,b,c,d);
     return 0;
 }
