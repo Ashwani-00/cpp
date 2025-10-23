@@ -1,0 +1,96 @@
+//function overloading
+
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+int add(int x,int y){
+    return x+y;
+}
+
+int add(int x,int y,int z){
+    return x+y+z;
+}
+
+int main(){
+    int v=add(1,32);
+    int v2=add(4,2,5);
+    cout<<v<<endl<<v2;
+    return 0;
+}*/
+
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+int mul(int x,int y){
+    return x*y;
+}
+
+int mul(int x,int y,int z){
+    return x*y*z;
+}
+
+int main(){
+    int v=mul(1,32);
+    int v2=mul(4,2,5);
+    cout<<v<<endl<<v2;
+    return 0;
+}*/
+
+
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+    int a=10;
+    int &b=a;
+    cout<<a<<endl;
+    cout<<b<<endl;
+    a=a+10;
+    cout<<b<<endl;
+    b=b+10;
+    cout<<a;
+    
+    return 0;
+}*/
+
+
+
+/*#include<bits/stdc++.h>
+using namespace std;
+void print(int num){
+    if(num<1){
+        return ;
+    }
+    cout<<num<<" ";
+    num--;
+    print(num);
+}
+int main(){
+    int num;
+    cin>>num;
+    print(num);
+    return 0;
+}*/
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+void print(int num){
+    if(num<-3){
+        return ;
+    }
+    cout<<num+4<<" ";
+    num--;
+    print(num);
+}
+int main(){
+    int num;
+    cin>>num;
+    print(num);
+    return 0;
+}
