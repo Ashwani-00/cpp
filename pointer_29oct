@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+class student{
+    int age,roll_no;
+    public:
+    void setValue(int a,int b){
+        age=a;
+        roll_no=b;
+    }
+    void getValue(){
+        cout<<"age: "<<age<<endl<<"Roll_no: "<<roll_no<<endl;
+    }
+};
+int main(){
+    student s1;
+    s1.setValue(20,100);
+    s1.getValue();
+    student s;
+    student* ptr=&s;
+    //(*ptr).setValue(15,236);
+    //(*ptr).getValue();
+    ptr->setValue(15,236);
+    ptr->getValue();
+    int size=5;
+    student *ss=new student[size];
+    student *head=ss;
+    for(int i=0;i<size;i++){
+        int a,b;
+        cin>>a>>b;
+        (*ss).setValue(a,b);
+        ss++;
+    }
+    for(int i=0;i<size;i++){
+        head->getValue();
+        head++;
+    }
+    return 0;
+
+}
