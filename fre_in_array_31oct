@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int arr[]={1,1,2,3,1,2,3,2,4,4};
+    int n=10;
+    int max=arr[0];
+    for(int i=0;i<n;i++){
+        if(max<=arr[i]){
+            max=arr[i];
+        }
+    }
+    int a[max+1]={};
+    for(int i=0;i<n;i++){
+        a[arr[i]]++;
+    }
+    for(int i=0;i<=max;i++){
+        cout<<i<<": "<<a[i]<<endl;
+    }
+    return 0;
+}
