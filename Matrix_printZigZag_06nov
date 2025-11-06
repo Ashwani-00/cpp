@@ -1,0 +1,108 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n=4;
+    int arr[n][n]={{3,1,5,2},{4,2,1,3},{5,1,3,7},{9,8,1,8}};
+    int x=n*n;
+
+
+    /*for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i==j){
+                cout<<arr[i][j]<<" ";
+            }
+        }
+    }*/
+
+    for(int i=0;i<n;i++){
+         cout<<arr[i][i]<<" ";
+    }
+    cout<<endl;
+    int p=n-1;
+    for(int i=0;i<n;i++){
+         cout<<arr[i][p]<<" ";
+         p--;
+    }
+    cout<<endl;
+    cout<<"Transpose:"<<endl;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<arr[j][i]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    cout<<"Max in row"<<endl;
+    for(int i=0;i<n;i++){
+        int max=arr[i][0];
+        for(int j=0;j<n;j++){
+            if(arr[i][j]>max){
+                max=arr[i][j];
+            }
+        }
+        cout<<max<<" ";
+    }
+    cout<<endl;
+    cout<<"Max in column"<<endl;
+    for(int i=0;i<n;i++){
+        int max=arr[0][i];
+        for(int j=0;j<n;j++){
+            if(arr[j][i]>max){
+                max=arr[j][i];
+            }
+        }
+        cout<<max<<" ";
+    }
+    cout<<endl;
+    cout<<"Spiral matrix:"<<endl;
+    //print spiral matrix
+    int st=0,end=n-1,left=0,right=n-1;
+    while(st<=end  && left<=right){
+        for(int i=left;i<=right;i++){
+            cout<<arr[st][i]<<" ";
+        }
+        st++;
+        for(int i=st;i<=end;i++){
+            cout<<arr[i][right]<<" ";
+        }
+        right--;
+        for(int i=right;i>=left;i--){
+            cout<<arr[end][i]<<" ";
+        }
+        end--;
+        for(int i=end;i>=st;i--){
+            cout<<arr[i][left]<<" ";
+        }
+        left++;
+    }
+    cout<<endl;
+    //print zigzag(col row wise)
+    cout<<"Zig Zag column wise"<<endl;
+    for(int i=0;i<n;i+=2){
+        for(int j=0;j<n;j++){
+            cout<<arr[j][i]<<" ";
+            if(j==n-1){
+                while(j>=0){
+                    cout<<arr[j][i+1]<<" ";
+                    j--;
+                }
+                break;
+            }
+        }
+    }
+    cout<<endl;
+    cout<<"Zig Zag row wise"<<endl;
+    for(int i=0;i<n;i+=2){
+        for(int j=0;j<n;j++){
+            cout<<arr[i][j]<<" ";
+            if(j==n-1){
+                while(j>=0){
+                    cout<<arr[i+1][j]<<" ";
+                    j--;
+                }
+                break;
+            }
+        }
+    }
+    return 0;
+}
