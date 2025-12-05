@@ -1,0 +1,71 @@
+#include<bits/stdc++.h>
+using namespace std;
+// class bird{
+//     public:
+//     void sleep(){
+//         cout<<"I am Sleeping."<<endl;
+//     }
+//     void eat(){
+//         cout<<"I am eating."<<endl;
+//     }
+//     void fly(){
+//         cout<<"I am flying."<<endl;
+//     }
+// };
+// class Dog{
+//     public:
+//     void sleep(){
+//         cout<<"I am Sleeping."<<endl;
+//     }
+//     void eat(){
+//         cout<<"I am eating."<<endl;
+//     }
+//     void run(){
+//         cout<<"I am running."<<endl;
+//     }
+// };
+
+
+class Animal{
+    public:
+    void sleep(){
+        cout<<"I am Sleeping."<<endl;
+    }
+    void eat(){
+        cout<<"I am eating."<<endl;
+    }
+};
+class bird : public Animal{
+    public:
+    void fly(){
+        cout<<"I am flying...."<<endl;
+    }
+};
+class Dog : public Animal{
+    public:
+    void run(){
+        cout<<"I am running....."<<endl;
+    }
+};
+class snake : public Animal{
+    public:
+    void run(){
+        cout<<"I am crawling....."<<endl;
+    }
+};
+
+int main(){
+    Dog d;
+    d.sleep();
+    d.eat();
+    d.run();
+    bird b;
+    b.sleep();
+    b.eat();
+    b.fly();
+    snake s;
+    s.sleep();
+    s.eat();
+    s.run();
+    return 0;
+}
